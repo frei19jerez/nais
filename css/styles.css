@@ -1,0 +1,183 @@
+/* ===============================
+   ANDRA NAIS – ESTILOS GENERALES
+   =============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* CONTENEDOR */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===============================
+   HEADER / NAVBAR
+   =============================== */
+
+.navbar {
+  background: #f7c6d0;
+  padding: 15px 0;
+}
+
+/* FLEX: LOGO IZQ / MENU DER */
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  color: #5a1a2c;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* MENU */
+.nav-menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #5a1a2c;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   HERO
+   =============================== */
+
+.hero {
+  background: #fde4ea;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  color: #5a1a2c;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+/* ===============================
+   BOTONES
+   =============================== */
+
+.btn {
+  display: inline-block;
+  background: #e91e63;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #c2185b;
+}
+
+/* ===============================
+   SECCIONES
+   =============================== */
+
+section {
+  padding: 40px 0;
+}
+
+section h2,
+section h3 {
+  color: #5a1a2c;
+  margin-bottom: 15px;
+}
+
+/* ===============================
+   LISTAS
+   =============================== */
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  background: #fde4ea;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ===============================
+   GALERÍA
+   =============================== */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+
+footer {
+  background: #f7c6d0;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  color: #5a1a2c;
+}
+
+/* ===============================
+   WHATSAPP FLOTANTE
+   =============================== */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 768px) {
+  .nav-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu a {
+    margin: 0 10px;
+  }
+}
