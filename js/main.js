@@ -1,25 +1,43 @@
 // ===============================
-// ANDRA NAIS – JS GENERAL
+// ANDRA NAIS – JS GENERAL (FINAL)
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ===============================
+     MENSAJE WHATSAPP GLOBAL
+     =============================== */
+
+  const telefono = "573142525205";
+  const mensaje =
+    "Hola cómo estás.\n" +
+    "Gracias por comunicarte con Andrea Nails💅❤️\n" +
+    "Quiero agendar una cita";
+
+  const whatsappURL =
+    `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+  /* ===============================
      WHATSAPP FLOTANTE
      =============================== */
 
-  const mensajeWhatsapp =
-    "Hola 👋 Bienvenido a Andra Nais 💅%0AQuiero agendar una cita";
-
   const whatsapp = document.createElement("a");
-  whatsapp.href = "https://wa.me/573142525205?text=" + encodeURIComponent(
-    "Hola 👋 Bienvenido a Andra Nais 💅\nQuiero agendar una cita"
-  );
+  whatsapp.href = whatsappURL;
   whatsapp.className = "whatsapp-float";
   whatsapp.innerHTML = "💬";
   whatsapp.target = "_blank";
   whatsapp.title = "Agenda tu cita por WhatsApp";
   document.body.appendChild(whatsapp);
+
+  /* ===============================
+     BOTONES WHATSAPP EN LA WEB
+     (usar class="btn-whatsapp")
+     =============================== */
+
+  document.querySelectorAll(".btn-whatsapp").forEach(btn => {
+    btn.href = whatsappURL;
+    btn.target = "_blank";
+  });
 
   /* ===============================
      MENU HAMBURGUESA
@@ -33,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       menu.classList.toggle("active");
     });
 
-    // Cerrar menú al hacer clic en un enlace (móvil)
+    // Cerrar menú al hacer clic (móvil)
     menu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         menu.classList.remove("active");

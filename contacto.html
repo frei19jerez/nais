@@ -1,41 +1,73 @@
-<link rel="stylesheet" href="/css/styles.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto | Andra Nais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
 
 <body>
 
+<!-- ===============================
+     HEADER / NAVBAR
+     =============================== -->
 <header class="navbar">
   <div class="container nav-flex">
+
     <h1 class="logo">Nais</h1>
 
-    <nav class="nav-menu">
+    <!-- BOTÓN HAMBURGUESA -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menú">
+      ☰
+    </button>
+
+    <!-- MENÚ -->
+    <nav class="nav-menu" id="nav-menu">
       <a href="index.html">Inicio</a>
       <a href="servicios.html">Servicios</a>
       <a href="galeria.html">Galería</a>
       <a href="ubicacion.html">Ubicación</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+
   </div>
 </header>
 
 
+<!-- ===============================
+     CONTENIDO
+     =============================== -->
 <section class="container">
   <h2>Contacto</h2>
-  <p>Agenda tu cita fácilmente:</p>
+
+  <p>Agenda tu cita fácilmente por WhatsApp:</p>
 
   <a
-    href="https://wa.me/573142525205"
+    href="https://wa.me/573142525205?text=Hola%20bienvenida%20a%20Andra%20Nais,%20quiero%20agendar%20una%20cita"
     class="btn"
     target="_blank"
+    aria-label="Contactar por WhatsApp"
   >
-    WhatsApp
+    💬 Escribir por WhatsApp
   </a>
 
-  <p>Horario: Lunes a Sábado</p>
+  <p style="margin-top:15px;">
+    ⏰ Horario: Lunes a Sábado
+  </p>
 </section>
 
+<!-- ===============================
+     FOOTER
+     =============================== -->
 <footer>
-  <p>Andra Nais – Belleza que se nota</p>
+  <p>© 2026 Andra Nais – Belleza que se nota</p>
 </footer>
 
-<script src="js/main.js" defer></script>
+<!-- JS -->
+<script src="/js/main.js" defer></script>
 
 </body>
+</html>

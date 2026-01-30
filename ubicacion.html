@@ -1,35 +1,74 @@
-<link rel="stylesheet" href="/css/styles.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ubicación | Andra Nais</title>
+
+  <!-- SEO básico -->
+  <meta name="description" content="Ubicación de Andra Nais en Puerto Araujo, Santander. Cómo llegar y agendar tu cita.">
+  <meta name="author" content="Andra Nais">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
 
 <body>
 
-<header class="navbar">
-  <div class="container nav-flex">
-    <h1 class="logo">Nais</h1>
+  <!-- ===============================
+       HEADER / NAVBAR
+       =============================== -->
+  <header class="navbar">
+    <div class="container nav-flex">
 
-    <nav class="nav-menu">
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="galeria.html">Galería</a>
-      <a href="ubicacion.html">Ubicación</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </div>
-</header>
+      <!-- LOGO -->
+      <h1 class="logo">Andra Nais</h1>
 
-<section class="container">
-  <h2>Ubicación</h2>
-  <p>Puerto Araujo, Santander</p>
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        ☰
+      </button>
 
-  <iframe 
-    src="https://www.google.com/maps?q=Puerto+Araujo+Santander&output=embed"
-    width="100%" height="350" style="border:0;" allowfullscreen loading="lazy">
-  </iframe>
-</section>
+      <!-- MENÚ -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="ubicacion.html">Ubicación</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
 
-<footer>
-  <p>Cómo llegar a Andra Nais</p>
-</footer>
+    </div>
+  </header>
 
-<script src="/js/main.js"></script>
+  <!-- ===============================
+       CONTENIDO
+       =============================== -->
+  <section class="container">
+    <h2>📍 Ubicación</h2>
+    <p>Estamos ubicados en <strong>Puerto Araujo, Santander</strong>.</p>
+
+    <iframe 
+      src="https://www.google.com/maps?q=Puerto+Araujo+Santander&output=embed"
+      width="100%" 
+      height="350" 
+      style="border:0; border-radius:10px; margin-top:15px;"
+      allowfullscreen 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <!-- ===============================
+       FOOTER
+       =============================== -->
+  <footer>
+    <p>© 2026 Andra Nais – Puerto Araujo, Santander</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="/js/main.js"></script>
 
 </body>
+</html>
