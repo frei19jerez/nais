@@ -2,17 +2,25 @@
    ANDRA NAIS – ESTILOS GENERALES
    =============================== */
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #fff;
+  background: #ffffff;
   color: #333;
   line-height: 1.6;
+}
+
+/* IMÁGENES RESPONSIVE */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* CONTENEDOR */
@@ -31,21 +39,29 @@ body {
   padding: 15px 0;
 }
 
-/* FLEX: LOGO IZQ / MENU DER */
 .nav-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 /* LOGO */
 .logo {
-  color: #5a1a2c;
   font-size: 26px;
   font-weight: bold;
+  color: #5a1a2c;
 }
 
-/* MENU */
+/* ===============================
+   MENÚ (PC)
+   =============================== */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
 .nav-menu a {
   margin-left: 20px;
   text-decoration: none;
@@ -55,6 +71,19 @@ body {
 
 .nav-menu a:hover {
   text-decoration: underline;
+}
+
+/* ===============================
+   BOTÓN HAMBURGUESA
+   =============================== */
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #5a1a2c;
+  cursor: pointer;
 }
 
 /* ===============================
@@ -77,9 +106,14 @@ body {
   font-size: 18px;
 }
 
-/* ===============================
-   BOTONES
-   =============================== */
+/* BOTONES */
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 .btn {
   display: inline-block;
@@ -93,6 +127,17 @@ body {
 
 .btn:hover {
   background: #c2185b;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #e91e63;
+  color: #e91e63;
+}
+
+.btn-outline:hover {
+  background: #e91e63;
+  color: #fff;
 }
 
 /* ===============================
@@ -135,7 +180,6 @@ ul li {
 }
 
 .galeria img {
-  width: 100%;
   border-radius: 10px;
 }
 
@@ -171,13 +215,59 @@ footer {
    RESPONSIVE
    =============================== */
 
+/* TABLET Y MÓVIL */
 @media (max-width: 768px) {
-  .nav-flex {
+
+  /* Mostrar hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultar menú horizontal */
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #f7c6d0;
     flex-direction: column;
-    gap: 10px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Mostrar menú activo */
+  .nav-menu.active {
+    display: flex;
   }
 
   .nav-menu a {
-    margin: 0 10px;
+    margin: 0;
+    padding: 12px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* MÓVIL PEQUEÑO */
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
   }
 }
