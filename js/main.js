@@ -10,9 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const telefono = "573142525205";
   const mensaje =
-    "Hola cómo estás.\n" +
-    "Gracias por comunicarte con Andrea Nails💅❤️\n" +
-    "Quiero agendar una cita";
+    "Hola, Andrea Nais 😊\n" +
+    "Quisiera agendar una cita 💅";
 
   const whatsappURL =
     `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
