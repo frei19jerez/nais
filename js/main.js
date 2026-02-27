@@ -1,17 +1,17 @@
 // ===============================
-// ANDRA NAIS – JS GENERAL (FINAL)
+// ANDREA NAILS – JS GENERAL (FINAL PRO)
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ===============================
-     MENSAJE WHATSAPP GLOBAL
+     CONFIGURACIÓN GLOBAL
      =============================== */
 
   const telefono = "573142525205";
   const mensaje =
-    "Hola, Andrea Nais 😊\n" +
-    "Quisiera agendar una cita 💅";
+    "Hola Andrea Nails 😊\n" +
+    "Quiero agendar una cita 💅";
 
   const whatsappURL =
     `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   whatsapp.className = "whatsapp-float";
   whatsapp.innerHTML = "💬";
   whatsapp.target = "_blank";
+  whatsapp.rel = "noopener";
   whatsapp.title = "Agenda tu cita por WhatsApp";
   document.body.appendChild(whatsapp);
 
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".btn-whatsapp").forEach(btn => {
     btn.href = whatsappURL;
     btn.target = "_blank";
+    btn.rel = "noopener";
   });
 
   /* ===============================
@@ -61,14 +63,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ===============================
-   SCROLL SUAVE (ANCLAS)
+   SCROLL SUAVE (ANCLAS SEGURAS)
    =============================== */
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document
-      .querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
+
+    const target = document.querySelector(this.getAttribute("href"));
+
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+
   });
 });
