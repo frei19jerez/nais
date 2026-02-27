@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ubicación | Andra Nais</title>
+  <title>Ubicación | Andrea Nails</title>
 
-  <!-- SEO básico -->
-  <meta name="description" content="Ubicación de Andra Nais en Puerto Araujo, Santander. Cómo llegar y agendar tu cita.">
-  <meta name="author" content="Andra Nais">
+  <!-- SEO -->
+  <meta name="description" content="Ubicación de Andrea Nails en Puerto Araujo, Santander. Cómo llegar y agendar tu cita fácilmente.">
+  <meta name="author" content="Andrea Nails">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/styles.css">
@@ -17,25 +17,22 @@
 <body>
 
   <!-- ===============================
-       HEADER / NAVBAR
+       HEADER
        =============================== -->
   <header class="navbar">
     <div class="container nav-flex">
 
-      <!-- LOGO -->
-      <h1 class="logo">Andra Nais</h1>
+      <h1 class="logo">Andrea Nails</h1>
 
-      <!-- BOTÓN HAMBURGUESA -->
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
         ☰
       </button>
 
-      <!-- MENÚ -->
       <nav class="nav-menu" id="nav-menu">
         <a href="index.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
         <a href="galeria.html">Galería</a>
-        <a href="ubicacion.html">Ubicación</a>
+        <a class="active" href="ubicacion.html">Ubicación</a>
         <a href="contacto.html">Contacto</a>
       </nav>
 
@@ -47,24 +44,40 @@
        =============================== -->
   <section class="container">
     <h2>📍 Ubicación</h2>
-    <p>Estamos ubicados en <strong>Puerto Araujo, Santander</strong>.</p>
 
-    <iframe 
-      src="https://www.google.com/maps?q=Puerto+Araujo+Santander&output=embed"
-      width="100%" 
-      height="350" 
+    <p>
+      Estamos ubicados en <strong>Puerto Araujo, Santander</strong>.
+      Agenda tu cita y visítanos 💅
+    </p>
+
+    <!-- BOTÓN MAPA REAL -->
+    <div style="margin:15px 0;">
+      <a
+        href="https://maps.app.goo.gl/75fZoHBUUsgvKUa2A?g_st=awb"
+        class="btn btn-outline"
+        target="_blank"
+        rel="noopener"
+      >
+        🚗 Abrir en Google Maps
+      </a>
+    </div>
+
+    <!-- MAPA EMBEBIDO -->
+    <iframe
+      src="https://maps.google.com/maps?q=Puerto%20Araujo%20Santander%20Colombia&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="350"
       style="border:0; border-radius:10px; margin-top:15px;"
-      allowfullscreen 
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
+      loading="lazy">
     </iframe>
+
   </section>
 
   <!-- ===============================
        FOOTER
        =============================== -->
   <footer>
-    <p>© 2026 Andra Nais – Puerto Araujo, Santander</p>
+    <p>© 2026 Andrea Nails – Puerto Araujo, Santander</p>
   </footer>
 
   <!-- JS -->
